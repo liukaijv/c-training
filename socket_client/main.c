@@ -4,7 +4,6 @@
 #include <string.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <unistd.h>
 
 #define SERVER_IP "0.0.0.0"
 #define PORT 8888

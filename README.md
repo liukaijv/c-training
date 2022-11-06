@@ -2,7 +2,7 @@
 
 > 开始学习c
 
-## 基础的开始
+## roadmap
 
 * socket_client
 * socket_server
@@ -10,7 +10,7 @@
 * socket_poll
 * socket_epoll
 * thread
-* thread_poll
+* thread_pool
 * process
 * pipe
 * timer
@@ -18,3 +18,6 @@
 * http_server
 * http_server_multi_process
 * http_server_multi_thread
+* http_server_multi_thread
+* daemonize
+* event_loop

@@ -99,8 +99,6 @@ int main(int argc, char **argv) {
                     break;
                 }
             }
-            char *connect_data = "Hello from server";
-            send(client_fd, connect_data, strlen(connect_data), 0);
 
         } else {
             ssize_t read_size;
@@ -109,14 +107,14 @@ int main(int argc, char **argv) {
                 if (c_fd > 0 && FD_ISSET(c_fd, &read_fds)) {
                     read_size = recv(c_fd, buffer, BUFFER_SIZE, 0);
                     // 异常或者被关闭的
-                    if (read_size == 0) {
+                    if (read_size <= 0) {
                         close(c_fd);
                         client_fds[i] = 0;
-                    } else if (read_size < 0) {
-                        perror("accept error: ");
                     } else {
                         printf("receive data from %d: %s, size: %zd\n", c_fd, buffer, read_size);
                         bzero(buffer, sizeof(buffer));
+                        char *send_data = "Hello from server";
+                        send(c_fd, send_data, strlen(send_data), 0);
                     }
                 }
             }

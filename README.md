@@ -5,6 +5,7 @@
 ## roadmap
 
 * socket_client
+* socket_echo_client
 * socket_server
 * socket_select
 * socket_poll
@@ -21,3 +22,4 @@
 * http_server_multi_thread
 * daemonize
 * event_loop
+* tail

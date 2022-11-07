@@ -41,6 +41,7 @@ int main(int argc, char **argv) {
         bzero(buffer, sizeof(buffer));
 
         printf("input: ");
+        // 接收键盘输入
         char ch = (char) getchar();
         while (ch != '\n') {
             buffer[n++] = ch;
@@ -78,7 +79,7 @@ int main(int argc, char **argv) {
 
     }
 
-    close(conn_fd);
+    shutdown(conn_fd, SHUT_RDWR);
     printf("client close.\n");
 
     return 0;

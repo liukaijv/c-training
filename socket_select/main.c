@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
         exit(EXIT_ERROR);
     }
 
-    printf("wait for client...\n");
+    printf("serve at: %s:%d\n", inet_ntoa(server_address.sin_addr), ntohs(server_address.sin_port));
 
     struct sockaddr_in client_address;
     socklen_t address_len = sizeof(client_address);

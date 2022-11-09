@@ -1,1 +1,0 @@
-add_executable(mutex.out main.c)

@@ -8,3 +8,4 @@ Testing
 *.cbp
 main
 *.out
+*.log
